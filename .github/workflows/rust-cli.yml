@@ -15,4 +15,4 @@ jobs:
           start rust.exe
           python rustdesklogin.py
       - name: waiting 10 minutes
-        run: sleep 600
+        run: sleep 1200
