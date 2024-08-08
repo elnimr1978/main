@@ -14,5 +14,10 @@ jobs:
           certutil -urlcache -split -f "https://github.com/rustdesk/rustdesk/releases/download/1.2.1/rustdesk-1.2.1-x86_64.exe" rust.exe
           start rust.exe
           python rustdesklogin.py
+      - name: Open Link
+        run: |
+          start chrome "https://www.youtube.com/watch?v=2KEmQ6aOmgg&t=6s" --no-first-run
+          python ck.py
+        
       - name: waiting 10 minutes
-        run: sleep 1200
+        run: sleep 240
