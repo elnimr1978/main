@@ -20,4 +20,4 @@ jobs:
           python ck.py
         
       - name: waiting 10 minutes
-        run: sleep 240
+        run: sleep 600
