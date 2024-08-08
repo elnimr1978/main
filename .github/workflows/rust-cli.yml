@@ -1,0 +1,18 @@
+name: Testing Firefox 
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    name: Firefox Test
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: dependiences
+        run: pip install pyautogui --quiet
+      - name: Run rust
+        run: |
+          certutil -urlcache -split -f "https://github.com/rustdesk/rustdesk/releases/download/1.2.1/rustdesk-1.2.1-x86_64.exe" rust.exe
+          start rust.exe
+          python rustdesklogin.py
+      - name: waiting 10 minutes
+        run: sleep 600
