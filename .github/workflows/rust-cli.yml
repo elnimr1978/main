@@ -15,9 +15,7 @@ jobs:
           start rust.exe
           python rustdesklogin.py
       - name: Open Link
-        run: |
-          start chrome "https://www.youtube.com/watch?v=2KEmQ6aOmgg&t=6s&autoplay=0" --no-first-run
-          python ck.py
+        run: cmd /c start.bat
         
       - name: waiting 10 minutes
         run: sleep 600
